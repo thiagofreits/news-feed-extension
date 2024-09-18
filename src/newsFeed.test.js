@@ -15,8 +15,9 @@ describe('Feed de Noticias', () => {
   });
 
   it('should display news articles', async () => {
-    await page.waitForSelector('#news-feed');
-    const results = await page.$$('#news-feed div');
-    expect(results.length).toBeGreaterThan(0);
+    await page.waitForSelector('#news-feed', { timeout: 15000 });
+    const newsFeedContent = await page.$eval('#news-feed', el => el.innerHTML);
+    console.log('Conteúdo do #news-feed:', newsFeedContent); // Verifique o conteúdo do #news-feed
+    expect((await page.$$('#news-feed div')).length).toBeGreaterThan(0);
   });
 });
