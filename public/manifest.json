@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Feed de Noticias",
+    "version": "1.0",
+    "description": "Uma extensão simples de feed de notícias de esportes",
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": {
+        "16": "icon16.png",
+        "48": "icon48.png"
+      }
+    },
+    "permissions": ["activeTab"]
+  }
